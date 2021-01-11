@@ -1876,11 +1876,9 @@ begin
 
     -- Assign the record signal.
     for i in 0 to BPC-1 loop
-      inp(i) <= (
-        valid => in_valid and in_mask(i),
-        data  => in_data(8*i+7 downto 8*i),
-        last  => in_valid and in_xlast_v(i)
-      );
+      inp(i).valid <= in_valid and in_mask(i);
+      inp(i).data <= in_data(8*i+7 downto 8*i);
+      inp(i).last <= in_valid and in_xlast_v(i);
     end loop;
 
   end process;
