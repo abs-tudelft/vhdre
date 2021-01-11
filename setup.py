@@ -9,7 +9,7 @@ def read(fname):
 
 setup(
     name = "vhdre",
-    version = "0.2",
+    version = "0.3",
     author = "Jeroen van Straten",
     author_email = "j.vanstraten-1@tudelft.nl",
     description = (
